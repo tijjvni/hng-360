@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  # title: HNG 360 Skills Evaluation API
-  title: Skills Evaluation API
+  title: HNG 360 Skills Evaluation API
+  # title: Skills Evaluation API
   description: |-
     This is a simple RESTful API for 360 skills evaluation Server based on the OpenAPI 3.0 specification. 
     You can find all the api endpoints
@@ -15,6 +15,7 @@ servers:
 tags:
   - name: auth
     description: Everything about your Authentication
+
 components:
   schemas:
     GeneralError:
@@ -25,7 +26,7 @@ components:
           format: int32
         message:
           type: string
-api_key: []          
+
 paths:
   /auth/login:
     post:
@@ -41,7 +42,7 @@ paths:
             type: string
         - name: password
           in: path
-          description: User Password
+          description: User password
           required: true          
           schema:
             type: string
